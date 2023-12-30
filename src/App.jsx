@@ -39,18 +39,28 @@ function App() {
 
     const handleSubmit = async (e) => {
         e.preventDefault()
-        const isValidAnagram = anagramsList.includes(input())
 
-        console.log(isValidAnagram ? 'valid anagram' : 'invalid anagram')
+        const parsedInput = input().toLowerCase()
+        const isValidAnagram = anagramsList.includes(parsedInput)
+
+        console.log(guesses.data)
+        const alreadyExists = guesses.data.some((item) => {
+            return item.value.toLowerCase() === parsedInput
+        })
 
         if (!isValidAnagram) {
-            setHasError(true)
+            setHasError('Invalid word')
+            return
+        }
+
+        if (alreadyExists) {
+            setHasError('Word already guessed')
             return
         }
 
         // // Add a new document in collection "cities"
         await addDoc(collection(db, 'guesses'), {
-            value: input(),
+            value: parsedInput,
             userId: userId(),
             timestamp: Date.now(),
         })
@@ -69,7 +79,7 @@ function App() {
                     </div>
 
                     <Show when={hasError()}>
-                        <span className="error">Error</span>
+                        <span className="error">{hasError()}</span>
                     </Show>
 
                     <form onSubmit={handleSubmit}>
