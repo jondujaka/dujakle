@@ -4,7 +4,9 @@ const data = fs.readFileSync('word-parsed.json', 'utf8')
 
 console.log(typeof data)
 
-const parsedData = JSON.parse(data).filter((word) => word.includes('t'))
+const uniqueWords = [...new Set(JSON.parse(data))]
+
+const parsedData = uniqueWords.filter((word, i) => word.includes('t'))
 
 console.log(parsedData.length)
 
