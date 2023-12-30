@@ -31,7 +31,7 @@ export const Guesses = (props) => {
                             <div className="single-guess">
                                 <span>{item.value.length}</span>
                                 <a
-                                    href={`https://en.wiktionary.org/wiki/${item.value}`}
+                                    href={`https://en.wiktionary.org/wiki/${item.value}#English`}
                                     target="_blank"
                                     rel="noopener noreferrer"
                                 >
