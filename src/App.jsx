@@ -28,8 +28,6 @@ function App() {
     const [input, setInput] = createSignal('')
     const [userId, setUserId] = createSignal('')
 
-    const errorAudio = new Audio('/error.mp3')
-
     const app = useFirebaseApp()
     const db = getFirestore(app)
     const guessesQuery = createMemo(() =>
@@ -39,6 +37,11 @@ function App() {
 
     const [hasError, setHasError] = createSignal(false)
 
+    const handleError = (message) => {
+        const errorAudio = new Audio('/error.mp3')
+        errorAudio.play()
+        setHasError(message)
+    }
     const handleSubmit = async (e) => {
         e.preventDefault()
 
@@ -51,20 +54,17 @@ function App() {
         })
 
         if (parsedInput.length < 4) {
-            setHasError('Word too short (minimum 4 letters)')
-            errorAudio.play()
+            handleError('Word too short (minimum 4 letters)')
             return
         }
 
         if (!isValidAnagram) {
-            setHasError('Invalid word')
-            errorAudio.play()
+            handleError('Invalid word')
             return
         }
 
         if (alreadyExists) {
-            setHasError('Word already guessed')
-            errorAudio.play()
+            handleError('Word already guessed')
             return
         }
 
