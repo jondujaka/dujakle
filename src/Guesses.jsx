@@ -15,7 +15,10 @@ export const Guesses = (props) => {
                             target="_blank"
                             rel="noopener noreferrer"
                         >
-                            {item.value} <span>({item.userId})</span>
+                            <span>
+                                ({item.value.length}){item.value}
+                            </span>
+                            <span>({item.userId})</span>
                         </a>
                     )}
                 </For>

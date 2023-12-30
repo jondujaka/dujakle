@@ -48,6 +48,11 @@ function App() {
             return item.value.toLowerCase() === parsedInput
         })
 
+        if (parsedInput.length < 4) {
+            setHasError('Word too short (minimum 4 letters)')
+            return
+        }
+
         if (!isValidAnagram) {
             setHasError('Invalid word')
             return
