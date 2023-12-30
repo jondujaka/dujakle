@@ -1,13 +1,13 @@
 import fs from 'fs'
 
-const data = fs.readFileSync('word-parsed.json', 'utf8')
+const data = fs.readFileSync('all-words.txt', 'utf8')
 
-console.log(typeof data)
+const words = data.split('\r\n')
 
-const uniqueWords = [...new Set(JSON.parse(data))]
+const parsedData = words.filter((word, i) => word.includes('t'))
 
-const parsedData = uniqueWords.filter((word, i) => word.includes('t'))
+const uniqueWords = [...new Set(parsedData)]
 
-console.log(parsedData.length)
+console.log(uniqueWords.length)
 
-fs.writeFileSync('word-parsed1.json', JSON.stringify(parsedData))
+fs.writeFileSync('words-parsed.json', JSON.stringify(uniqueWords))
