@@ -48,6 +48,17 @@
     color: white;
     margin: 0.5rem 0;
     padding: 0.4rem;
+    flex-grow: 1;
+}
+
+.single-guess {
+    display: flex;
+    align-items: center;
+}
+
+.single-guess > span {
+    width: 24px;
+    flex-shrink: 0;
 }
 
 .guesses-list a:hover {

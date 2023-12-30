@@ -19,7 +19,7 @@ import {
 import { useFirebaseApp, useFirestore } from 'solid-firebase'
 import { Guesses } from './Guesses'
 // There are dictionaries available via NPM, such as:
-import anagramsList from './assets/word-parsed.json'
+import anagramsList from './assets/words-parsed.json'
 import { WordCircle } from './WordCircle'
 
 const WORD = 'ACROBATIC'
@@ -27,6 +27,8 @@ const SCRAMBLED = 'RBACTOCIA'
 function App() {
     const [input, setInput] = createSignal('')
     const [userId, setUserId] = createSignal('')
+
+    const errorAudio = new Audio('/error.mp3')
 
     const app = useFirebaseApp()
     const db = getFirestore(app)
@@ -50,16 +52,19 @@ function App() {
 
         if (parsedInput.length < 4) {
             setHasError('Word too short (minimum 4 letters)')
+            errorAudio.play()
             return
         }
 
         if (!isValidAnagram) {
             setHasError('Invalid word')
+            errorAudio.play()
             return
         }
 
         if (alreadyExists) {
             setHasError('Word already guessed')
+            errorAudio.play()
             return
         }
 
