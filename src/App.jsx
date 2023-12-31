@@ -23,7 +23,7 @@ import anagramsList from './assets/words-parsed.json'
 import { WordCircle } from './WordCircle'
 
 const WORD = 'CONJUGATE'
-const SCRAMBLED = 'GAENJOCUT'
+const SCRAMBLED = 'GAETJNOCUT'
 function App() {
     const [input, setInput] = createSignal('')
     const [userId, setUserId] = createSignal('')
