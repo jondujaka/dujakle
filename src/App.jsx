@@ -22,8 +22,8 @@ import { Guesses } from './Guesses'
 import anagramsList from './assets/words-parsed.json'
 import { WordCircle } from './WordCircle'
 
-const WORD = 'PAINTABLE'
-const SCRAMBLED = 'LEBATINAP'
+const WORD = 'CONJUGATE'
+const SCRAMBLED = 'GAENJOCUT'
 function App() {
     const [input, setInput] = createSignal('')
     const [userId, setUserId] = createSignal('')
