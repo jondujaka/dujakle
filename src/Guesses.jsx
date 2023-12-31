@@ -2,10 +2,27 @@ import { For, createSignal, splitProps, Show } from 'solid-js'
 
 import { ConfettiExplosion } from 'solid-confetti-explosion'
 
+import anagramsList from './assets/words-parsed.json'
+
 export const Guesses = (props) => {
     const [sort, setSort] = createSignal('')
     const [explode, setExplode] = createSignal(false)
     const { items, totalCount, targetWord } = props
+
+    anagramsList.forEach((anagramItem) => {
+        console.log(items.length)
+
+        let isGuessed = false
+        items.forEach((item) => {
+            if (!isGuessed) {
+                isGuessed = item.value === anagramItem
+            }
+        })
+
+        if (!isGuessed) {
+            console.log(anagramItem)
+        }
+    })
 
     const largeConfettiProps = {
         force: 0.8,

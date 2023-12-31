@@ -2,8 +2,6 @@ import fs from 'fs'
 import path from 'path'
 import readline from 'readline'
 
-import words from '../assets/word-parsed.json'
-
 /**
  * A class for generating anagrams of words from comma-separated letters.
  * @example
@@ -16,7 +14,7 @@ import words from '../assets/word-parsed.json'
  * const anagrams = wordGenerator.getAnagrams(lettersArray);
  * console.log(anagrams);
  */
-class WordGenerator {
+export class WordGenerator {
     /**
      * Create a new instance of WordGenerator.
      */
@@ -30,6 +28,22 @@ class WordGenerator {
      * @param {function} callback - Function to be called on each line
      * @param {function} finished - Function to be called when file reading is finished
      */
+    readWordsFile(callback, finished) {
+        const filepath = './collins-dict.txt'
+        const readStream = fs.createReadStream(filepath)
+        const rl = readline.createInterface({
+            input: readStream,
+            crlfDelay: Infinity,
+        })
+
+        rl.on('line', (line) => {
+            callback(line)
+        })
+
+        rl.on('close', () => {
+            finished()
+        })
+    }
 
     /**
      * Creates a histogram from a given word based on the alphabet property
@@ -63,8 +77,12 @@ class WordGenerator {
      */
     async generateTree() {
         return new Promise((resolve, reject) => {
-            words.map(
+            this.readWordsFile(
                 (word) => {
+                    if (word.length < 4 || word.length > 9) {
+                        return
+                    }
+
                     const histogram = this.histogramify(word)
                     let currentNode = this.tree
                     let alphabetIndex = 0
@@ -86,9 +104,12 @@ class WordGenerator {
                     if (!currentNode.words) {
                         currentNode.words = []
                     }
+
                     currentNode.words.push(word)
                 },
                 () => {
+                    console.log('Done')
+                    console.log(JSON.stringify(this.tree))
                     resolve()
                 }
             )
@@ -102,7 +123,9 @@ class WordGenerator {
      */
     getAnagrams(lettersArray) {
         const histogram = this.histogramify(lettersArray)
+        console.log(histogram)
         const rootNode = this.tree
+        console.log(this.tree)
         let frontier = [rootNode]
         let alphabetIndex = 0
 
@@ -149,5 +172,3 @@ class WordGenerator {
         return allAnagrams.sort((a, b) => b.length - a.length)
     }
 }
-
-export { WordGenerator }
