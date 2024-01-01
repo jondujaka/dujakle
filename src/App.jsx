@@ -22,8 +22,8 @@ import { Guesses } from './Guesses'
 import anagramsList from './assets/words-parsed.json'
 import { WordCircle } from './WordCircle'
 
-const WORD = 'CONJUGATE'
-const SCRAMBLED = 'GAETJNOCUT'
+const WORD = 'HAIRPIECE'
+const SCRAMBLED = 'EICRPIEAH'
 function App() {
     const [input, setInput] = createSignal('')
     const [userId, setUserId] = createSignal('')
@@ -31,7 +31,7 @@ function App() {
     const app = useFirebaseApp()
     const db = getFirestore(app)
     const guessesQuery = createMemo(() =>
-        query(collection(db, 'guesses'), orderBy('timestamp', 'desc'))
+        query(collection(db, WORD.toLowerCase()), orderBy('timestamp', 'desc'))
     )
     const guesses = useFirestore(guessesQuery)
 
@@ -69,7 +69,7 @@ function App() {
         }
 
         // // Add a new document in collection "cities"
-        await addDoc(collection(db, 'guesses'), {
+        await addDoc(collection(db, WORD.toLowerCase()), {
             value: parsedInput,
             userId: userId(),
             timestamp: Date.now(),
