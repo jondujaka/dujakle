@@ -139,7 +139,6 @@ function App() {
         let alreadyExists = false
 
         guesses.data.forEach((item) => {
-            console.log(item)
             if (!alreadyExists) {
                 alreadyExists = item.value === randomItem;
             }
@@ -151,10 +150,10 @@ function App() {
         }
 
 
-         // // Add a new document in collection "cities"
+         // // Add a new document in the guesses db
          await addDoc(collection(db, WORD.toLowerCase()), {
             value: randomItem,
-            userId: userId(),
+            userId: 'hint',
             timestamp: Date.now(),
         })
     }
