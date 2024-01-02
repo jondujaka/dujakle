@@ -24,13 +24,6 @@ export const Guesses = (props) => {
         }
     })
 
-    const largeConfettiProps = {
-        force: 0.8,
-        duration: 3000,
-        particleCount: 300,
-        width: 1600,
-        colors: ['#041E43', '#1471BF', '#5BB4DC', '#FC027B', '#66D805'],
-    }
 
     return (
         <div className="guesses">

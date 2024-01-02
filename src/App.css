@@ -126,3 +126,13 @@ form button {
 .targets li {
     display: block;
 }
+
+.hint-button {
+    display: block;
+    margin-left: 0;
+    margin-right: auto;
+    font-size: .75rem;
+    background: none;
+    text-decoration: underline;
+    padding: 8px 0;
+}

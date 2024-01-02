@@ -21,6 +21,7 @@ import { Guesses } from './Guesses'
 // There are dictionaries available via NPM, such as:
 import anagramsList from './assets/words-parsed.json'
 import { WordCircle } from './WordCircle'
+import anagram from 'anagram'
 
 const WORD = 'LABORIOUS'
 
@@ -35,29 +36,29 @@ const levels = [
             duration: 800,
             particleCount: 100,
             width: 800,
-        }
+        },
     },
     {
         title: 'Word enthusiast',
-        target: Math.floor(anagramsList.length * .5),
+        target: Math.floor(anagramsList.length * 0.5),
         confetti: {
             force: 0.4,
             duration: 1200,
             particleCount: 240,
             width: 1200,
-        }
+        },
     },
     {
         title: 'Master Woorder',
-        target: Math.floor(anagramsList.length * .75),
+        target: Math.floor(anagramsList.length * 0.75),
         confetti: {
             confetti: {
                 force: 0.6,
                 duration: 1400,
                 particleCount: 300,
                 width: 1600,
-            }
-        }
+            },
+        },
     },
     {
         title: 'Word obliterator',
@@ -68,8 +69,8 @@ const levels = [
                 duration: 2500,
                 particleCount: 1000,
                 width: 1800,
-            }
-        }
+            },
+        },
     },
 ]
 function App() {
@@ -125,6 +126,39 @@ function App() {
         setInput('')
     }
 
+    const getHint = async () => {
+        const randomItem =
+            anagramsList[Math.floor(Math.random() * anagramsList.length)]
+        
+
+        if (randomItem === WORD.toLowerCase()) {
+            getHint()
+            return;
+        }
+
+        let alreadyExists = false
+
+        guesses.data.forEach((item) => {
+            console.log(item)
+            if (!alreadyExists) {
+                alreadyExists = item.value === randomItem;
+            }
+        })
+
+        if (alreadyExists) {
+            getHint()
+            return
+        }
+
+
+         // // Add a new document in collection "cities"
+         await addDoc(collection(db, WORD.toLowerCase()), {
+            value: randomItem,
+            userId: userId(),
+            timestamp: Date.now(),
+        })
+    }
+
     const handleSetUsername = (e) => {
         setUserId(e.srcElement[0].value)
     }
@@ -152,6 +186,9 @@ function App() {
                         />
                         <button type="submit">Submit</button>
                     </form>
+                    <button className="hint-button" onClick={getHint}>
+                        Hint
+                    </button>
                     <div>
                         <Switch>
                             <Match when={guesses.loading}>
