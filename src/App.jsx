@@ -153,7 +153,7 @@ function App() {
          // // Add a new document in the guesses db
          await addDoc(collection(db, WORD.toLowerCase()), {
             value: randomItem,
-            userId: 'hint',
+            userId: `${userId()}(${hint})`,
             timestamp: Date.now(),
         })
     }
