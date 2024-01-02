@@ -34,16 +34,26 @@ export const Guesses = (props) => {
 
     return (
         <div className="guesses">
-            <Show when={items.length === totalCount}>
-                <ConfettiExplosion {...largeConfettiProps} />
-            </Show>
             <div className="guesses-list valid">
-                <h3>
-                    Guesses: {items.length}
-                </h3>
+                <h3>Guesses: {items.length} / {totalCount}</h3>
                 <div className="targets">
                     <span>Targets:</span>
-                    <ul>{levels.map(level => <li className={level.target <= items.length && 'active'}>{level.title} ({level.target})</li>)}</ul>
+                    <ul>
+                        {levels.map((level) => (
+                            <li
+                                className={
+                                    level.target <= items.length && 'active'
+                                }
+                            >
+                                {level.title} ({level.target})
+                                <Show when={items.length === level.target}>
+                                    <ConfettiExplosion
+                                        {...level.confetti}
+                                    />
+                                </Show>
+                            </li>
+                        ))}
+                    </ul>
                 </div>
 
                 <For each={items}>

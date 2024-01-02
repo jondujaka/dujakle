@@ -22,26 +22,54 @@ import { Guesses } from './Guesses'
 import anagramsList from './assets/words-parsed.json'
 import { WordCircle } from './WordCircle'
 
-const WORD = 'OBEDIENCE'
+const WORD = 'LABORIOUS'
 
-const SCRAMBLED = 'EEBOCNEID'
+const SCRAMBLED = 'OABRUOISL'
 
 const levels = [
     {
         title: 'Word enjoyer',
-        target: Math.floor(anagramsList.length / 4),
+        target: Math.floor(anagramsList.length * 0.75),
+        confetti: {
+            force: 0.2,
+            duration: 800,
+            particleCount: 100,
+            width: 800,
+        }
     },
     {
         title: 'Word enthusiast',
-        target: Math.floor(anagramsList.length / 2),
+        target: Math.floor(anagramsList.length * .5),
+        confetti: {
+            force: 0.4,
+            duration: 1200,
+            particleCount: 240,
+            width: 1200,
+        }
     },
     {
         title: 'Master Woorder',
-        target: Math.floor(anagramsList.length / 1.75),
+        target: Math.floor(anagramsList.length * .25),
+        confetti: {
+            confetti: {
+                force: 0.6,
+                duration: 1400,
+                particleCount: 300,
+                width: 1600,
+            }
+        }
     },
     {
         title: 'Word obliterator',
         target: anagramsList.length,
+        confetti: {
+            confetti: {
+                force: 1,
+                duration: 2500,
+                particleCount: 1000,
+                width: 1800,
+            }
+        }
     },
 ]
 function App() {
