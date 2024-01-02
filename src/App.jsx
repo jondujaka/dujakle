@@ -93,7 +93,7 @@ function App() {
     const handleSubmit = async (e) => {
         e.preventDefault()
 
-        const parsedInput = input().toLowerCase()
+        const parsedInput = input().trim().toLowerCase()
         const isValidAnagram = anagramsList.includes(parsedInput)
 
         console.log(guesses.data)
