@@ -1,205 +1,106 @@
-hairpiece
+obedience
+codeine
+bendee
+bodice
+ceboid
+codein
+coined
+debone
+edenic
+encode
+beedi
+bidon
+bonce
+boned
+cebid
+coden
 
-peachier
+coned
 
-cheaper
+deice
 
-cheapie
+diene
 
-epeiric
+dobie
 
-peacher
+donee
 
-achier
+niece
 
-apiece
+been
 
-cahier
+bend
 
-ceriph
+bene
 
-cipher
+bice
 
-eparch
+bide
 
-pacier
+bien
 
-pereia
+bind
 
-piecer
+bine
 
-pierce
+bode
 
-preach
+bond
 
-recipe
-aerie
+bone
 
-areic
+cede
 
-caper
+cedi
 
-capri
+cine
 
-carpe
+cion
 
-carpi
+code
 
-ceria
+coed
 
-chair
+coin
 
-chape
+cone
 
-chare
+coni
 
-cheap
+deco
 
-cheep
+dene
 
-cheer
+deni
 
-chirp
+dice
 
-crape
+dine
 
-creep
+dino
 
-crepe
+done
 
-cripe
+ebon
 
-erica
+eide
 
-haere
+iced
 
-hiree
+icon
 
-icier
+idee
 
-pacer
+need
 
-parch
+nice
 
-peace
+nide
 
-peach
+node
 
-perch
+nodi
 
-perea
+odic
 
-phare
-
-pichi
-
-piece
-
-price
-
-raphe
-
-reach
-
-recap
-
-riche
-acer
-
-ache
-
-acre
-
-aper
-
-arch
-
-cape
-
-caph
-
-care
-
-carp
-
-cepe
-
-cere
-
-chai
-
-chap
-
-char
-
-chia
-
-chip
-
-cire
-
-crap
-
-each
-
-eche
-
-epha
-
-epic
-
-hair
-
-hare
-
-harp
-
-heap
-
-hear
-
-heir
-
-here
-
-herp
-
-hire
-
-irie
-
-pace
-
-pair
-
-pare
-
-pear
-
-pech
-
-peer
-
-pere
-
-peri
-
-pica
-
-pice
-
-pier
-
-pree
-
-race
-
-reap
-
-rhea
-
-rice
-
-rich
-
-ripe
+once
