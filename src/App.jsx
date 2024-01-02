@@ -29,7 +29,7 @@ const SCRAMBLED = 'OABRUOISL'
 const levels = [
     {
         title: 'Word enjoyer',
-        target: Math.floor(anagramsList.length * 0.75),
+        target: Math.floor(anagramsList.length * 0.25),
         confetti: {
             force: 0.2,
             duration: 800,
@@ -49,7 +49,7 @@ const levels = [
     },
     {
         title: 'Master Woorder',
-        target: Math.floor(anagramsList.length * .25),
+        target: Math.floor(anagramsList.length * .75),
         confetti: {
             confetti: {
                 force: 0.6,
