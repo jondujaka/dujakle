@@ -22,8 +22,27 @@ import { Guesses } from './Guesses'
 import anagramsList from './assets/words-parsed.json'
 import { WordCircle } from './WordCircle'
 
-const WORD = 'HAIRPIECE'
-const SCRAMBLED = 'EICRPIEAH'
+const WORD = 'OBEDIENCE'
+const SCRAMBLED = 'EECBCOIED'
+
+const levels = [
+    {
+        title: 'Word enjoyer',
+        target: Math.floor(anagramsList.length / 6),
+    },
+    {
+        title: 'Word enthusiast',
+        target: Math.floor(anagramsList.length / 4),
+    },
+    {
+        title: 'Master Woorder',
+        target: Math.floor(anagramsList.length / 1.8),
+    },
+    {
+        title: 'Word obliterator',
+        target: anagramsList.length,
+    },
+]
 function App() {
     const [input, setInput] = createSignal('')
     const [userId, setUserId] = createSignal('')
@@ -115,6 +134,7 @@ function App() {
                             <Match when={guesses.data}>
                                 <Guesses
                                     items={guesses.data}
+                                    levels={levels}
                                     totalCount={anagramsList.length}
                                 />
                             </Match>

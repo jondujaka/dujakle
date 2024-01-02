@@ -7,7 +7,7 @@ import anagramsList from './assets/words-parsed.json'
 export const Guesses = (props) => {
     const [sort, setSort] = createSignal('')
     const [explode, setExplode] = createSignal(false)
-    const { items, totalCount, targetWord } = props
+    const { items, totalCount, targetWord, levels } = props
 
     anagramsList.forEach((anagramItem) => {
         console.log(items.length)
@@ -39,8 +39,12 @@ export const Guesses = (props) => {
             </Show>
             <div className="guesses-list valid">
                 <h3>
-                    Guesses: {items.length} / {totalCount}
+                    Guesses: {items.length}
                 </h3>
+                <div className="targets">
+                    <span>Targets:</span>
+                    <ul>{levels.map(level => <li className={level.target <= items.length && 'active'}>{level.title} ({level.target})</li>)}</ul>
+                </div>
 
                 <For each={items}>
                     {(item, i) => (
