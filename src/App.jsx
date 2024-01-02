@@ -23,20 +23,21 @@ import anagramsList from './assets/words-parsed.json'
 import { WordCircle } from './WordCircle'
 
 const WORD = 'OBEDIENCE'
-const SCRAMBLED = 'EECBCOIED'
+
+const SCRAMBLED = 'EEBCONEID'
 
 const levels = [
     {
         title: 'Word enjoyer',
-        target: Math.floor(anagramsList.length / 6),
-    },
-    {
-        title: 'Word enthusiast',
         target: Math.floor(anagramsList.length / 4),
     },
     {
+        title: 'Word enthusiast',
+        target: Math.floor(anagramsList.length / 2),
+    },
+    {
         title: 'Master Woorder',
-        target: Math.floor(anagramsList.length / 1.8),
+        target: Math.floor(anagramsList.length / 1.75),
     },
     {
         title: 'Word obliterator',
