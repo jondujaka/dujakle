@@ -24,7 +24,7 @@ import { WordCircle } from './WordCircle'
 
 const WORD = 'OBEDIENCE'
 
-const SCRAMBLED = 'EEBCONEID'
+const SCRAMBLED = 'EEBOCNEID'
 
 const levels = [
     {
