@@ -23,14 +23,14 @@ import anagramsList from './assets/words-parsed.json'
 import { WordCircle } from './WordCircle'
 import anagram from 'anagram'
 
-const WORD = 'LABORIOUS'
+const WORD = 'LIFEBLOOD'
 
-const SCRAMBLED = 'OABRUOISL'
+const SCRAMBLED = 'IOOBDELFL'
 
 const levels = [
     {
         title: 'Word enjoyer',
-        target: Math.floor(anagramsList.length * 0.25),
+        target: Math.floor(anagramsList.length * 0.3),
         confetti: {
             force: 0.2,
             duration: 800,
@@ -50,25 +50,13 @@ const levels = [
     },
     {
         title: 'Master Woorder',
-        target: Math.floor(anagramsList.length * 0.75),
+        target: Math.floor(anagramsList.length * 0.6),
         confetti: {
             confetti: {
                 force: 0.6,
                 duration: 1400,
                 particleCount: 300,
                 width: 1600,
-            },
-        },
-    },
-    {
-        title: 'Word obliterator',
-        target: anagramsList.length,
-        confetti: {
-            confetti: {
-                force: 1,
-                duration: 2500,
-                particleCount: 1000,
-                width: 1800,
             },
         },
     },

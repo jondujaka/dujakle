@@ -1,371 +1,209 @@
 
 
-laborious
+lifeblood
 
-bailors
+folioed
 
-burials
+foliole
 
-labours
+befool
 
-ooralis
+bifold
 
-railbus
+billed
 
-robalos
+blooie
 
-suboral
+boiled
 
-airbus
+bolide
 
-arioso
+bolled
 
-bailor
+boodie
 
-borals
+boodle
 
-brails
+diobol
 
-brasil
+doobie
 
-broils
+doolie
 
-burial
+filled
 
-bursal
+flooie
 
-isobar
+foible
 
-labors
+foiled
 
-labour
+foodie
 
-libras
+fooled
 
-lubras
+ollied
 
-obolus
+belli
 
-oorali
+bield
 
-raulis
+blood
 
-robalo
+boldo
 
-sailor
+booed
 
-souari
+dobie
 
-urbias
+doble
 
-urials
+felid
 
-aboil
+field
 
-abris
+filed
 
-alios
+fille
 
-arils
+fillo
 
-auris
+flied
 
-bails
+flood
 
-basil
+folie
 
-birls
+folio
 
-biros
+libel
 
-blurs
+lobed
 
-boars
+looed
 
-boils
+looie
 
-bolar
+obeli
 
-bolas
-
-bolos
-
-bolus
-
-booai
-
-boors
-
-boral
-
-boras
-
-brail
-
-brios
-
-broil
-
-broos
-
-buras
-
-burls
-
-buroo
-
-bursa
-
-ioras
-
-labor
-
-lairs
-
-laris
-
-liars
-
-libra
-
-liras
-
-lobar
-
-lobos
-
-loris
-
-louis
-
-lours
-
-lubra
-
-obias
+obole
 
 oboli
 
-obols
+oiled
 
-olios
+oldie
 
-orals
+ollie
 
-rails
+bell
 
-rauli
+bide
 
-rials
+bile
 
-roils
+bill
 
-sabir
+bled
 
-slurb
-
-solar
-
-sorbi
-
-sural
-
-urbia
-
-urial
-
-abri
-
-ails
-
-airs
-
-albs
-
-aloo
-
-also
-
-arbs
-
-aril
-
-bail
-
-bais
-
-bals
-
-bars
-
-bias
-
-bios
-
-birl
-
-biro
-
-blur
-
-boar
-
-boas
+bode
 
 boil
 
-bois
+bold
 
-bola
+bole
+
+boll
 
 bolo
 
-boor
+defi
 
-boos
+deil
 
-bora
+delf
 
-bras
+deli
 
-brio
+dell
 
-bris
+diel
 
-broo
+dill
 
-bros
+diol
 
-bura
+dole
 
-burl
+doli
 
-burs
+doll
 
-iora
+fell
 
-isba
+felo
 
-labs
+feod
 
-lair
+fide
 
-lari
+fido
 
-lars
+file
 
-liar
+fill
 
-lias
+filo
 
-libs
+fled
 
-lira
+floe
 
-loas
+foie
+
+foil
+
+fold
+
+food
+
+fool
+
+idle
+
+idol
+
+lido
+
+lied
+
+lief
+
+life
+
+lilo
+
+lobe
 
 lobo
 
-lobs
+lode
 
-loos
+loid
 
-lour
+loof
 
-lurs
-
-oars
-
-obas
-
-obia
-
-obis
+oboe
 
 obol
 
-oils
+oeil
+
+olde
+
+oleo
+
+olid
 
 olio
-
-oral
-
-orbs
-
-osar
-
-ours
-
-rabi
-
-rail
-
-rais
-
-rial
-
-rias
-
-ribs
-
-robs
-
-roil
-
-roos
-
-rosa
-
-rubs
-
-rusa
-
-sail
-
-sari
-
-saul
-
-sial
-
-silo
-
-slab
-
-slob
-
-slub
-
-slur
-
-soar
-
-soba
-
-soil
-
-sola
-
-soli
-
-solo
-
-sool
-
-sora
-
-sorb
-
-sori
-
-soul
-
-sour
-
-suba
-
-sura
-
-urbs
-
-ursa
