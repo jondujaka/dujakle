@@ -1,205 +1,319 @@
-hairpiece
+abduction
+butanoic
+auction
 
-peachier
+bandito
 
-cheaper
+botanic
 
-cheapie
+caution
 
-epeiric
+conduit
 
-peacher
+noctuid
+abduct
 
-achier
+abound
 
-apiece
+action
 
-cahier
+anodic
 
-ceriph
+atonic
 
-cipher
+bandit
 
-eparch
+bonaci
 
-pacier
+bonduc
 
-pereia
+bonita
 
-piecer
+boudin
 
-pierce
+cation
 
-preach
+cobnut
 
-recipe
-aerie
+cuboid
 
-areic
+dacoit
 
-caper
+induct
 
-capri
+obduct
 
-carpe
+obtain
 
-carpi
+obtund
 
-ceria
+outbid
 
-chair
+toucan
 
-chape
+tunica
 
-chare
+about
 
-cheap
+actin
 
-cheep
+adbot
 
-cheer
+adunc
 
-chirp
+antic
 
-crape
+audio
 
-creep
+audit
 
-crepe
+bacon
 
-cripe
+banco
 
-erica
+baton
 
-haere
+bidon
 
-hiree
+biont
 
-icier
+biota
 
-pacer
+bound
 
-parch
+bunco
 
-peace
+bundt
 
-peach
+cabin
 
-perch
+cando
 
-perea
+canid
 
-phare
+canti
 
-pichi
+canto
 
-piece
+cnida
 
-price
+coati
 
-raphe
+cobia
 
-reach
+cotan
 
-recap
+count
 
-riche
-acer
+cubit
 
-ache
+cutin
 
-acre
+danio
 
-aper
+daunt
 
-arch
+dicot
 
-cape
+dicta
 
-caph
+dicto
 
-care
+dictu
 
-carp
+donut
 
-cepe
+doubt
 
-cere
+ducat
 
-chai
+ducti
 
-chap
+nicad
 
-char
+nubia
 
-chia
+octad
 
-chip
+octan
 
-cire
+ontic
 
-crap
+tabid
 
-each
+tabun
 
-eche
+tondi
 
-epha
+tonic
 
-epic
+tunic
 
-hair
+unbid
 
-hare
+uncia
 
-harp
+unica
+abut
 
-heap
+acid
 
-hear
+acto
 
-heir
+adit
 
-here
+aint
 
-herp
+anti
 
-hire
+aunt
 
-irie
+auto
 
-pace
+bait
 
-pair
+band
 
-pare
+bani
 
-pear
+bato
 
-pech
+baud
 
-peer
+bind
 
-pere
+bint
 
-peri
+boat
 
-pica
+bona
 
-pice
+bond
 
-pier
+bota
 
-pree
+bout
 
-race
+buco
 
-reap
+budo
 
-rhea
+buna
 
-rice
+bund
 
-rich
+bunt
 
-ripe
+cadi
+
+caid
+
+cain
+
+cant
+
+ciao
+
+cion
+
+coat
+
+coda
+
+coin
+
+coni
+
+dato
+
+daub
+
+daut
+
+dino
+
+dint
+
+dita
+
+doat
+
+docu
+
+doit
+
+dona
+
+douc
+
+dout
+
+duci
+
+duct
+
+duit
+
+dunt
+
+icon
+
+inca
+
+into
+
+iota
+
+naoi
+
+nodi
+
+nota
+
+nuit
+
+nuoc
+
+obia
+
+obit
+
+odic
+
+otic
+
+outa
+
+tabi
+
+tabu
+
+taco
+
+tain
+
+tian
+
+toad
+
+tuan
+
+tuba
+
+tuna
+
+ubac
+
+udon
+
+unai
+
+unci
+
+unco
+
+undo
+
+unit
+
+unto
