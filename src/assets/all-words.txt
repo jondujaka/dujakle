@@ -1,209 +1,137 @@
 
 
-lifeblood
+adulthood
 
-folioed
+holdout
 
-foliole
+doodah
 
-befool
+laddoo
 
-bifold
+outadd
 
-billed
+adult
 
-blooie
+ahold
 
-boiled
+aloud
 
-bolide
+altho
 
-bolled
+dotal
 
-boodie
+doula
 
-boodle
+hodad
 
-diobol
+laddu
 
-doobie
+ladoo
 
-doolie
+loath
 
-filled
+lotah
 
-flooie
+outdo
 
-foible
+aloo
 
-foiled
+alto
 
-foodie
+auld
 
-fooled
+auto
 
-ollied
+dado
 
-belli
+dahl
 
-bield
+dato
 
-blood
+daut
 
-boldo
+dhal
 
-booed
+dhol
 
-dobie
+doat
 
-doble
+dodo
 
-felid
+dolt
 
-field
+doth
 
-filed
+dout
 
-fille
+duad
 
-fillo
+dual
 
-flied
+halo
 
-flood
+halt
 
-folie
+haul
 
-folio
+haut
 
-libel
+hold
 
-lobed
+holo
 
-looed
+holt
 
-looie
+hood
 
-obeli
+hoot
 
-obole
+hula
 
-oboli
+lath
 
-oiled
+lato
 
-oldie
+latu
 
-ollie
+laud
 
-bell
+load
 
-bide
+loot
 
-bile
+lota
 
-bill
+loth
 
-bled
+loud
 
-bode
+lout
 
-boil
+ludo
 
-bold
+oath
 
-bole
+odah
 
-boll
+outa
 
-bolo
+thou
 
-defi
+thud
 
-deil
+toad
 
-delf
+todo
 
-deli
+tola
 
-dell
+told
 
-diel
+tolu
 
-dill
+tool
 
-diol
+udal
 
-dole
-
-doli
-
-doll
-
-fell
-
-felo
-
-feod
-
-fide
-
-fido
-
-file
-
-fill
-
-filo
-
-fled
-
-floe
-
-foie
-
-foil
-
-fold
-
-food
-
-fool
-
-idle
-
-idol
-
-lido
-
-lied
-
-lief
-
-life
-
-lilo
-
-lobe
-
-lobo
-
-lode
-
-loid
-
-loof
-
-oboe
-
-obol
-
-oeil
-
-olde
-
-oleo
-
-olid
-
-olio
+ulto

@@ -23,9 +23,9 @@ import anagramsList from './assets/words-parsed.json'
 import { WordCircle } from './WordCircle'
 import anagram from 'anagram'
 
-const WORD = 'LIFEBLOOD'
+const WORD = 'ADULTHOOD'
 
-const SCRAMBLED = 'IOOBDELFL'
+const SCRAMBLED = 'OHLADUTOD'
 
 const levels = [
     {
