@@ -23,6 +23,10 @@ import anagramsList from './assets/words-parsed.json'
 import { WordCircle } from './WordCircle'
 import anagram from 'anagram'
 
+const WORD = 'ADULTHOOD'
+
+const SCRAMBLED = 'OHLADUTOD'
+
 const levels = [
     {
         title: 'Word enjoyer',
@@ -57,8 +61,6 @@ const levels = [
         },
     },
 ]
-const WORD = 'ABDUCTION'
-const SCRAMBLED = 'TUINDOBCA'
 function App() {
     const [input, setInput] = createSignal('')
     const [userId, setUserId] = createSignal('')
