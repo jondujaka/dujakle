@@ -1,319 +1,228 @@
-abduction
-butanoic
-auction
 
-bandito
+conjugate
 
-botanic
+coagent
 
-caution
+cognate
 
-conduit
+jaconet
 
-noctuid
-abduct
+cangue
 
-abound
+cogent
 
-action
+coteau
 
-anodic
+econut
 
-atonic
+jaunce
 
-bandit
+jounce
 
-bonaci
+jugate
 
-bonduc
+nougat
 
-bonita
+octane
 
-boudin
+outage
 
-cation
-
-cobnut
-
-cuboid
-
-dacoit
-
-induct
-
-obduct
-
-obtain
-
-obtund
-
-outbid
+tongue
 
 toucan
 
-tunica
+uncage
 
-about
+acute
 
-actin
+agent
 
-adbot
+agone
 
-adunc
+atone
 
-antic
+cajon
 
-audio
-
-audit
-
-bacon
-
-banco
-
-baton
-
-bidon
-
-biont
-
-biota
-
-bound
-
-bunco
-
-bundt
-
-cabin
-
-cando
-
-canid
-
-canti
+canoe
 
 canto
 
-cnida
+cento
 
-coati
+conga
 
-cobia
+conge
+
+conte
 
 cotan
 
 count
 
-cubit
+enact
 
-cutin
+gaunt
 
-danio
+genoa
 
-daunt
+genua
 
-dicot
+guaco
 
-dicta
+guano
 
-dicto
+jacet
 
-dictu
+jaune
 
-donut
+jaunt
 
-doubt
+jeton
 
-ducat
+junco
 
-ducti
+junta
 
-nicad
+junto
 
-nubia
+oaten
 
-octad
+ocean
 
 octan
 
-ontic
+ounce
 
-tabid
+tango
 
-tabun
+tegua
 
-tondi
+togae
 
-tonic
+togue
 
-tunic
+tonga
 
-unbid
+ungot
 
-uncia
-
-unica
-abut
-
-acid
+acne
 
 acto
 
-adit
+aeon
 
-aint
+agon
 
-anti
+ague
+
+ante
 
 aunt
 
 auto
 
-bait
+cage
 
-band
-
-bani
-
-bato
-
-baud
-
-bind
-
-bint
-
-boat
-
-bona
-
-bond
-
-bota
-
-bout
-
-buco
-
-budo
-
-buna
-
-bund
-
-bunt
-
-cadi
-
-caid
-
-cain
+cane
 
 cant
 
-ciao
+cate
 
-cion
+cent
 
 coat
 
-coda
+cone
 
-coin
+cote
 
-coni
+cute
 
-dato
+etna
 
-daub
+gaen
 
-daut
+gane
 
-dino
+gate
 
-dint
+gaun
 
-dita
+gean
 
-doat
+gena
 
-docu
+gent
 
-doit
+genu
 
-dona
+geta
 
-douc
+gnat
 
-dout
+goat
 
-duci
+gone
 
-duct
+gout
 
-duit
+guan
 
-dunt
+jane
 
-icon
+jato
 
-inca
+jean
 
-into
+jeon
 
-iota
+jong
 
-naoi
+jota
 
-nodi
+juga
+
+jute
+
+neat
+
+neta
 
 nota
 
-nuit
+note
 
 nuoc
 
-obia
-
-obit
-
-odic
-
-otic
+once
 
 outa
 
-tabi
-
-tabu
+tace
 
 taco
 
-tain
+tang
 
-tian
+tegu
 
-toad
+toea
+
+toga
+
+tone
+
+tong
 
 tuan
 
-tuba
-
 tuna
 
-ubac
+tune
 
-udon
-
-unai
-
-unci
+tung
 
 unco
-
-undo
-
-unit
 
 unto
