@@ -1,7 +1,8 @@
 /* @refresh reload */
 import { render } from 'solid-js/web'
 import { initializeApp } from 'firebase/app'
-import { FirebaseProvider } from 'solid-firebase'
+import { signInAnonymously, getAuth } from 'firebase/auth'
+import { FirebaseProvider, useAuth } from 'solid-firebase'
 
 import './index.css'
 import App from './App'
@@ -22,6 +23,18 @@ const firebaseConfig = {
 
 const app = initializeApp(firebaseConfig)
 const root = document.getElementById('root')
+
+const auth = getAuth()
+
+signInAnonymously(auth)
+    .then(() => {
+        // Signed in..
+    })
+    .catch((error) => {
+        const errorCode = error.code
+        const errorMessage = error.message
+        // ...
+    })
 
 render(
     () => (

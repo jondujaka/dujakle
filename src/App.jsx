@@ -23,10 +23,6 @@ import anagramsList from './assets/words-parsed.json'
 import { WordCircle } from './WordCircle'
 import anagram from 'anagram'
 
-const WORD = 'ADULTHOOD'
-
-const SCRAMBLED = 'OHLADUTOD'
-
 const levels = [
     {
         title: 'Word enjoyer',
@@ -61,6 +57,8 @@ const levels = [
         },
     },
 ]
+const WORD = 'CONJUGATE'
+const SCRAMBLED = 'UTJAGECNO'
 function App() {
     const [input, setInput] = createSignal('')
     const [userId, setUserId] = createSignal('')
@@ -85,7 +83,6 @@ function App() {
         const parsedInput = input().trim().toLowerCase()
         const isValidAnagram = anagramsList.includes(parsedInput)
 
-        console.log(guesses.data)
         const alreadyExists = guesses.data.some((item) => {
             return item.value.toLowerCase() === parsedInput
         })
@@ -117,18 +114,17 @@ function App() {
     const getHint = async () => {
         const randomItem =
             anagramsList[Math.floor(Math.random() * anagramsList.length)]
-        
 
         if (randomItem === WORD.toLowerCase()) {
             getHint()
-            return;
+            return
         }
 
         let alreadyExists = false
 
         guesses.data.forEach((item) => {
             if (!alreadyExists) {
-                alreadyExists = item.value === randomItem;
+                alreadyExists = item.value === randomItem
             }
         })
 
@@ -137,9 +133,8 @@ function App() {
             return
         }
 
-
-         // // Add a new document in the guesses db
-         await addDoc(collection(db, WORD.toLowerCase()), {
+        // // Add a new document in the guesses db
+        await addDoc(collection(db, WORD.toLowerCase()), {
             value: randomItem,
             userId: `${userId()}(hint)`,
             timestamp: Date.now(),
