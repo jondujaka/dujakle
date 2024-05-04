@@ -19,11 +19,9 @@ export default function useFirestore(app) {
             userId,
             created: Timestamp.now(),
         })
-        console.log('doc', doc)
     }
 
     function getData(collectionName) {
-        console.log(collectionName)
         const [data, setData] = createSignal([])
         getDocs(collection(db, collectionName)).then((records) => {
             setData(records.docs.map((doc) => doc.data()))

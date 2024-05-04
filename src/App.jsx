@@ -57,8 +57,8 @@ const levels = [
         },
     },
 ]
-const WORD = 'CONJUGATE'
-const SCRAMBLED = 'UTJAGECNO'
+const WORD = 'MUJAHEDIN'
+const SCRAMBLED = 'HAUJDMIEN'
 function App() {
     const [input, setInput] = createSignal('')
     const [userId, setUserId] = createSignal('')
@@ -86,6 +86,8 @@ function App() {
         const alreadyExists = guesses.data.some((item) => {
             return item.value.toLowerCase() === parsedInput
         })
+
+        console.log(anagramsList)
 
         if (parsedInput.length < 4) {
             handleError('Word too short (minimum 4 letters)')

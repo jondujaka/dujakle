@@ -10,25 +10,20 @@ export const Guesses = (props) => {
     const { items, totalCount, targetWord, levels } = props
 
     anagramsList.forEach((anagramItem) => {
-        console.log(items.length)
-
         let isGuessed = false
         items.forEach((item) => {
             if (!isGuessed) {
                 isGuessed = item.value === anagramItem
             }
         })
-
-        if (!isGuessed) {
-            console.log(anagramItem)
-        }
     })
-
 
     return (
         <div className="guesses">
             <div className="guesses-list valid">
-                <h3>Guesses: {items.length} / {totalCount}</h3>
+                <h3>
+                    Guesses: {items.length} / {totalCount}
+                </h3>
                 <div className="targets">
                     <span>Targets:</span>
                     <ul>
@@ -40,9 +35,7 @@ export const Guesses = (props) => {
                             >
                                 {level.title} ({level.target})
                                 <Show when={items.length === level.target}>
-                                    <ConfettiExplosion
-                                        {...level.confetti}
-                                    />
+                                    <ConfettiExplosion {...level.confetti} />
                                 </Show>
                             </li>
                         ))}
