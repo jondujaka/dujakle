@@ -5,7 +5,7 @@ const data = fs.readFileSync('all-words.txt', 'utf8')
 const words = data.split('\r\n')
 
 console.log(words)
-const parsedData = words.filter((word, i) => word.length && word.includes('d'))
+const parsedData = words.filter((word, i) => word.length && word.includes('l'))
 
 const uniqueWords = [...new Set(parsedData)]
 
