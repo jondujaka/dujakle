@@ -2,10 +2,10 @@ import fs from 'fs'
 
 const data = fs.readFileSync('all-words.txt', 'utf8')
 
-const words = data.replaceAll('\n', '').replaceAll(' ', '\r').split('\r')
+const words = data.split('\n')
 
 console.log(words)
-const parsedData = words.filter((word, i) => word.length && word.includes('N'))
+const parsedData = words.filter((word, i) => word.length && word.includes('T'))
 
 const uniqueWords = [...new Set(parsedData)]
 

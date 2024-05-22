@@ -57,8 +57,8 @@ const levels = [
         },
     },
 ]
-const WORD = 'ABANDONED'
-const SCRAMBLED = 'DODENBAAN'
+const WORD = 'ACQUITTED'
+const SCRAMBLED = 'TDQCTAEIU'
 function App() {
     const [input, setInput] = createSignal('')
     const [userId, setUserId] = createSignal('')
