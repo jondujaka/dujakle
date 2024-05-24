@@ -55,7 +55,10 @@ const Chat = ({ word, userId }) => {
         const mins = date.getMinutes()
         const sec = date.getSeconds()
 
-        return `[${hours}:${mins}:${sec}]`
+        return {
+            time: `[${hours}:${mins}:${sec}]`,
+            full: date,
+        }
     }
 
     return (
@@ -70,17 +73,23 @@ const Chat = ({ word, userId }) => {
                             id="chat-scroll"
                         >
                             <For each={chatItems.data}>
-                                {(item, i) => (
-                                    <>
-                                        <span>
-                                            <em>
-                                                {getTimeStamp(item.timestamp)}
-                                            </em>
-                                            <b>{item.userId}: </b>
-                                            {item.value}
-                                        </span>
-                                    </>
-                                )}
+                                {(item, i) => {
+                                    const timestamp = getTimeStamp(
+                                        item.timestamp
+                                    )
+
+                                    return (
+                                        <>
+                                            <span>
+                                                <em title={timestamp.full}>
+                                                    {timestamp.time}
+                                                </em>
+                                                <b>{item.userId}: </b>
+                                                {item.value}
+                                            </span>
+                                        </>
+                                    )
+                                }}
                             </For>
                         </div>
                     </div>
