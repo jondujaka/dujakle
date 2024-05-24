@@ -137,7 +137,9 @@ function App() {
 
     const getHint = async () => {
         const randomItem =
-            anagramsList[Math.floor(Math.random() * anagramsList.length)]
+            anagramsList[
+                Math.floor(Math.random() * anagramsList.length)
+            ].toLowerCase()
 
         if (randomItem === WORD.toLowerCase()) {
             getHint()
