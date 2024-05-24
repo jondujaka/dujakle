@@ -90,11 +90,10 @@ function App() {
         e.preventDefault()
 
         const parsedInput = input().trim().toLowerCase()
-        const isValidAnagram = true
-        anagramsList.includes(parsedInput)
+        const anagrams = anagramsList.map(item => item.toLowerCase())
+        const isValidAnagram = anagrams.includes(parsedInput)
 
-        const alreadyExists = false
-        guesses.data.some((item) => {
+        const alreadyExists = guesses.data.some((item) => {
             return item.value.toLowerCase() === parsedInput
         })
 
