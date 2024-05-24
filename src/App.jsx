@@ -25,6 +25,8 @@ import anagramsList from './assets/words-parsed.json'
 import { WordCircle } from './WordCircle'
 import AudioPad from './AudioPad'
 import anagram from 'anagram'
+import Graveyard from './Graveyard'
+import Chat from './Chat'
 
 const levels = [
     {
@@ -61,7 +63,8 @@ const levels = [
     },
 ]
 const WORD = 'TEST'
-const WORDGRAVEYARD = `${WORD}-graveyard`
+const WORDGRAVEYARD = `${WORD.toLowerCase()}-graveyard`
+const WORDCHAT = `${WORD.toLowerCase()}-chat`
 const SCRAMBLED = 'DODENBAAN'
 
 function App() {
@@ -98,6 +101,11 @@ function App() {
             return item.value.toLowerCase() === parsedInput
         })
 
+        if (parsedInput.length > 18) {
+            handleError('Why are you being stupid')
+            return
+        }
+
         if (parsedInput.length < 4) {
             handleError('Word too short (minimum 4 letters)')
             return
@@ -110,7 +118,7 @@ function App() {
 
         if (!isValidAnagram) {
             handleError('Sent to graveyard', 'grave')
-            await addDoc(collection(db, `${WORDGRAVEYARD}-graveyard`), {
+            await addDoc(collection(db, `${WORDGRAVEYARD}`), {
                 value: parsedInput,
                 userId: userId(),
                 timestamp: Date.now(),
@@ -165,33 +173,34 @@ function App() {
         <>
             <Switch>
                 <Match when={userId().length}>
-                    <div>
-                        <WordCircle word={SCRAMBLED} />
+                    <div className="column">
+                        <AudioPad userId={userId} />
+                        <Graveyard userId={userId} word={WORDGRAVEYARD} />
                     </div>
+                    <div className="column main">
+                        <div>
+                            <WordCircle word={SCRAMBLED} />
+                        </div>
 
-                    <Show when={hasError()}>
-                        <span className="error">{hasError()}</span>
-                    </Show>
+                        <Show when={hasError()}>
+                            <span className="error">{hasError()}</span>
+                        </Show>
 
-                    <form onSubmit={handleSubmit}>
-                        <input
-                            type="text"
-                            required
-                            value={input()}
-                            onInput={(e) => {
-                                setHasError(false)
-                                setInput(e.currentTarget.value)
-                            }}
-                        />
-                        <button type="submit">Submit</button>
-                    </form>
-                    <button className="hint-button" onClick={getHint}>
-                        Hint
-                    </button>
-
-                    <AudioPad userId={userId} />
-
-                    <div>
+                        <form onSubmit={handleSubmit}>
+                            <input
+                                type="text"
+                                required
+                                value={input()}
+                                onInput={(e) => {
+                                    setHasError(false)
+                                    setInput(e.currentTarget.value)
+                                }}
+                            />
+                            <button type="submit">Submit</button>
+                        </form>
+                        <button className="hint-button" onClick={getHint}>
+                            Hint
+                        </button>
                         <Switch>
                             <Match when={guesses.loading}>
                                 <p>Loading...</p>
@@ -207,6 +216,9 @@ function App() {
                                 />
                             </Match>
                         </Switch>
+                    </div>
+                    <div className="column">
+                        <Chat word={WORDCHAT} userId={userId} />
                     </div>
                 </Match>
 

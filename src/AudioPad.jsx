@@ -40,8 +40,8 @@ const audioList = [
         slug: 'airhorn',
     },
     {
-        label: 'Dubhorn',
-        slug: 'dubhorn',
+        label: 'Dubsiren',
+        slug: 'dubsiren',
     },
     {
         label: 'Loon',
@@ -102,7 +102,7 @@ const AudioPad = ({ userId }) => {
 
     return (
         <>
-            <h3>Brain rot pad</h3>
+            <h2>Brain rot pad</h2>
             <div className="audio-pad">
                 <For each={audioList}>
                     {(item, i) => (
@@ -113,7 +113,9 @@ const AudioPad = ({ userId }) => {
                             onClick={() => sendAudio(item.slug)}
                             disabled={audioTimeout()}
                             title={
-                                audioTimeout() ? 'You have to wait' : item.label
+                                audioTimeout()
+                                    ? 'You have to wait 10 seconds'
+                                    : item.label
                             }
                         >
                             {item.label}

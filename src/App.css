@@ -1,10 +1,28 @@
 #root {
-    max-width: 1280px;
+    display: flex;
     margin: 0 auto;
-    padding: 2rem;
+    width: 100%;
+
     text-align: center;
+    justify-content: space-between;
+    max-width: 1600px;
 }
 
+.column {
+    width: 30%;
+    max-width: 450px;
+    min-width: 350px;
+    padding: 2em 1em 0 1em;
+    margin: 0 1em;
+    background: #191919;
+    display: flex;
+    flex-direction: column;
+}
+
+.column.main {
+    padding-left: 2em;
+    padding-right: 2em;
+}
 .logo {
     height: 6em;
     padding: 1.5em;
@@ -26,10 +44,10 @@
     color: #888;
 }
 
-.guesses {
-    max-width: 800px;
-    min-width: 250px;
-    margin: 0 auto;
+.guesses-list {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
 }
 
 .valid {
@@ -55,7 +73,17 @@
     overflow: auto;
     padding: 0 2em;
     margin: 0 -2em;
-    max-height: calc(100vh - 700px);
+    flex: 1;
+    position: relative;
+}
+
+.scrollable-inner {
+    position: absolute;
+    width: calc(100% - 24px);
+    top: 8px;
+    /* left: 20px; */
+    left: 8px;
+    /* width: calc(100% - 20px); */
 }
 
 .single-guess {
@@ -67,8 +95,8 @@
 .single-guess > span {
     width: 24px;
     flex-shrink: 0;
-    position: absolute;
-    transform: translateX(-100%);
+    /* position: absolute; */
+    /* transform: translateX(-100%); */
 }
 
 .guesses-list a:hover {
@@ -153,4 +181,81 @@ form button {
 
 .sound-button.disabled {
     cursor: initial;
+}
+
+.graveyard,
+.chat {
+    /* position: fixed; */
+
+    background-color: #1a1a1a;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: stretch;
+    margin-top: 3rem;
+    flex-grow: 1;
+    position: relative;
+}
+
+.chat span {
+    display: block;
+    text-align: left;
+    margin-bottom: 1rem;
+    word-break: break-all;
+    hyphens: auto;
+}
+
+.graveyard h2 {
+    text-align: center;
+    margin: 1rem auto;
+}
+
+.graveyard > div {
+    overflow: auto;
+    width: 100%;
+}
+
+.graveyard-scroll,
+.chat-scroll {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    /* border: 1px solid rgb(253, 140, 140); */
+    overflow: auto;
+}
+.graveyard-scroll {
+    top: 4rem;
+}
+.chat-scroll {
+    padding: 0.5rem;
+}
+.graveyard div div {
+    display: flex;
+    justify-content: space-between;
+    background: #1d1d1d;
+    margin: 0.4rem 0;
+    padding: 0 1rem;
+}
+
+.chat {
+    margin-top: 1rem;
+}
+
+.chat em {
+    font-size: 0.9em;
+    font-style: normal;
+    color: #827575;
+    margin-right: 0.4em;
+}
+
+.chat-form form {
+    margin: 0;
+    display: flex;
+    padding: 1em 0;
+}
+
+.chat-form input {
+    flex: 1;
 }
