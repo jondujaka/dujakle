@@ -51,6 +51,13 @@
     flex-grow: 1;
 }
 
+.guesses-scrollable {
+    overflow: auto;
+    padding: 0 2em;
+    margin: 0 -2em;
+    max-height: calc(100vh - 700px);
+}
+
 .single-guess {
     display: flex;
     align-items: center;
@@ -99,7 +106,6 @@ form button {
     margin-top: 2rem;
 }
 
-
 .targets {
     text-align: left;
     background: #2d2d2d;
@@ -114,7 +120,7 @@ form button {
 
 .targets .active {
     color: green;
-    font-weight: bold;;
+    font-weight: bold;
 }
 
 .targets ul {
@@ -131,8 +137,20 @@ form button {
     display: block;
     margin-left: 0;
     margin-right: auto;
-    font-size: .75rem;
+    font-size: 0.75rem;
     background: none;
     text-decoration: underline;
     padding: 8px 0;
+}
+
+.audio-pad {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    grid-column-gap: 4px;
+    grid-row-gap: 4px;
+}
+
+.sound-button.disabled {
+    cursor: initial;
 }

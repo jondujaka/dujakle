@@ -5,6 +5,7 @@ import {
     createMemo,
     onMount,
     Show,
+    createEffect,
 } from 'solid-js'
 import solidLogo from './assets/solid.svg'
 import viteLogo from '/vite.svg'
@@ -13,6 +14,7 @@ import {
     addDoc,
     collection,
     getFirestore,
+    onSnapshot,
     orderBy,
     query,
 } from 'firebase/firestore'
@@ -21,6 +23,7 @@ import { Guesses } from './Guesses'
 // There are dictionaries available via NPM, such as:
 import anagramsList from './assets/words-parsed.json'
 import { WordCircle } from './WordCircle'
+import AudioPad from './AudioPad'
 import anagram from 'anagram'
 
 const levels = [
@@ -57,37 +60,43 @@ const levels = [
         },
     },
 ]
-const WORD = 'ABANDONED'
+const WORD = 'TEST'
 const SCRAMBLED = 'DODENBAAN'
+
 function App() {
+    const app = useFirebaseApp()
+    const db = getFirestore(app)
+
     const [input, setInput] = createSignal('')
     const [userId, setUserId] = createSignal('')
 
-    const app = useFirebaseApp()
-    const db = getFirestore(app)
-    const guessesQuery = createMemo(() =>
-        query(collection(db, WORD.toLowerCase()), orderBy('timestamp', 'desc'))
+    const collectionQuery = query(
+        collection(db, WORD.toLowerCase()),
+        orderBy('timestamp', 'desc')
     )
-    const guesses = useFirestore(guessesQuery)
+    const guesses = useFirestore(collectionQuery)
 
     const [hasError, setHasError] = createSignal(false)
 
+    const playErrorAudio = () => {
+        new Audio('/error.mp3').play()
+    }
+
     const handleError = (message) => {
-        const errorAudio = new Audio('/error.mp3')
-        errorAudio.play()
         setHasError(message)
+        playErrorAudio()
     }
     const handleSubmit = async (e) => {
         e.preventDefault()
 
         const parsedInput = input().trim().toLowerCase()
-        const isValidAnagram = anagramsList.includes(parsedInput)
+        const isValidAnagram = true
+        anagramsList.includes(parsedInput)
 
-        const alreadyExists = guesses.data.some((item) => {
+        const alreadyExists = false
+        guesses.data.some((item) => {
             return item.value.toLowerCase() === parsedInput
         })
-
-        console.log(anagramsList)
 
         if (parsedInput.length < 4) {
             handleError('Word too short (minimum 4 letters)')
@@ -145,6 +154,7 @@ function App() {
 
     const handleSetUsername = (e) => {
         setUserId(e.srcElement[0].value)
+        // initAudioNotifications()
     }
     return (
         <>
@@ -173,6 +183,9 @@ function App() {
                     <button className="hint-button" onClick={getHint}>
                         Hint
                     </button>
+
+                    <AudioPad userId={userId} />
+
                     <div>
                         <Switch>
                             <Match when={guesses.loading}>

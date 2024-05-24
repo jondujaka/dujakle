@@ -42,23 +42,25 @@ export const Guesses = (props) => {
                     </ul>
                 </div>
 
-                <For each={items}>
-                    {(item, i) => (
-                        <>
-                            <div className="single-guess">
-                                <span>{item.value.length}</span>
-                                <a
-                                    href={`https://en.wiktionary.org/wiki/${item.value}#English`}
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                >
-                                    {item.value}
-                                    <span>({item.userId})</span>
-                                </a>
-                            </div>
-                        </>
-                    )}
-                </For>
+                <div className="guesses-scrollable">
+                    <For each={items}>
+                        {(item, i) => (
+                            <>
+                                <div className="single-guess">
+                                    <span>{item.value.length}</span>
+                                    <a
+                                        href={`https://en.wiktionary.org/wiki/${item.value}#English`}
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                    >
+                                        {item.value}
+                                        <span>({item.userId})</span>
+                                    </a>
+                                </div>
+                            </>
+                        )}
+                    </For>
+                </div>
             </div>
         </div>
     )
