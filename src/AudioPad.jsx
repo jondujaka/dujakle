@@ -28,41 +28,29 @@ const audioList = [
         slug: 'augh',
     },
     {
-        label: 'Bruh',
-        slug: 'bruh',
+        label: 'Laugh',
+        slug: 'laugh',
     },
     {
         label: 'Run',
         slug: 'run',
     },
+    {
+        label: 'Airhorn',
+        slug: 'airhorn',
+    },
+    {
+        label: 'Dubhorn',
+        slug: 'dubhorn',
+    },
+    {
+        label: 'Loon',
+        slug: 'loon',
+    },
 ]
 
-let audioInit = false
-const audioQueue = []
-const alreadyPlayed = []
-
-let allowNext = true
-
-const initAudioPlayer = () => {
-    window.setInterval(() => {
-        if (!audioQueue.length) {
-            return
-        }
-
-        if (!allowNext) {
-            return
-        }
-
-        const newAudio = audioQueue.shift()
-        const audioPlayer = new Audio(`/${newAudio.value}.mp3`)
-        allowNext = false
-
-        audioPlayer.onended = function () {
-            allowNext = true
-            alreadyPlayed.push(newAudio.id)
-        }
-        audioPlayer.play()
-    }, 200)
+const playFile = (file) => {
+    new Audio(`/${file}.mp3`).play()
 }
 const AudioPad = ({ userId }) => {
     const app = useFirebaseApp()
@@ -75,7 +63,7 @@ const AudioPad = ({ userId }) => {
         if (!hasAudio()) {
             return
         }
-        audioQueue.push(audioData)
+        playFile(audioData.value)
     }
 
     const brainrot = query(
@@ -107,19 +95,10 @@ const AudioPad = ({ userId }) => {
     }
 
     createEffect(() => {
-        if (audioInit) {
-            return
-        }
-        initAudioNotifications()
-    })
-
-    const initAudioNotifications = () => {
         window.setTimeout(() => {
-            audioInit = true
             setHasAudio(true)
-            initAudioPlayer()
         }, 1000)
-    }
+    })
 
     return (
         <>

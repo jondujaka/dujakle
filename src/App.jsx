@@ -61,6 +61,7 @@ const levels = [
     },
 ]
 const WORD = 'TEST'
+const WORDGRAVEYARD = `${WORD}-graveyard`
 const SCRAMBLED = 'DODENBAAN'
 
 function App() {
@@ -78,19 +79,19 @@ function App() {
 
     const [hasError, setHasError] = createSignal(false)
 
-    const playErrorAudio = () => {
-        new Audio('/error.mp3').play()
+    const playErrorAudio = (audio) => {
+        new Audio(`/${audio}.mp3`).play()
     }
 
-    const handleError = (message) => {
+    const handleError = (message, audio = 'error') => {
         setHasError(message)
-        playErrorAudio()
+        playErrorAudio(audio)
     }
     const handleSubmit = async (e) => {
         e.preventDefault()
 
         const parsedInput = input().trim().toLowerCase()
-        const anagrams = anagramsList.map(item => item.toLowerCase())
+        const anagrams = anagramsList.map((item) => item.toLowerCase())
         const isValidAnagram = anagrams.includes(parsedInput)
 
         const alreadyExists = guesses.data.some((item) => {
@@ -102,13 +103,18 @@ function App() {
             return
         }
 
-        if (!isValidAnagram) {
-            handleError('Invalid word')
+        if (alreadyExists) {
+            handleError('Word already guessed')
             return
         }
 
-        if (alreadyExists) {
-            handleError('Word already guessed')
+        if (!isValidAnagram) {
+            handleError('Sent to graveyard', 'grave')
+            await addDoc(collection(db, `${WORDGRAVEYARD}-graveyard`), {
+                value: parsedInput,
+                userId: userId(),
+                timestamp: Date.now(),
+            })
             return
         }
 
