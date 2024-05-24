@@ -50,7 +50,12 @@ const Chat = ({ word, userId }) => {
     })
 
     const getTimeStamp = (time) => {
-        return '[02:33:21]'
+        const date = new Date(time)
+        const hours = date.getHours()
+        const mins = date.getMinutes()
+        const sec = date.getSeconds()
+
+        return `[${hours}:${mins}:${sec}]`
     }
 
     return (
