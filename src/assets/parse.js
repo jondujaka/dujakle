@@ -4,8 +4,16 @@ const data = fs.readFileSync('all-words.txt', 'utf8')
 
 const words = data.split('\n')
 
-console.log(words)
-const parsedData = words.filter((word, i) => word.length && word.includes('T'))
+const parsedData = words
+    .filter((word) => word.length && word.includes('C'))
+    .map((word) => {
+        if (!word.includes('(')) {
+            return word
+        }
+
+        const wordEnd = word.indexOf('(')
+        return word.substring(0, wordEnd).trim()
+    })
 
 const uniqueWords = [...new Set(parsedData)]
 
