@@ -22,7 +22,7 @@ const Chat = ({ word, userId }) => {
         const msgElement = e.srcElement[0]
         const msg = msgElement.value
 
-        if (msg.length > 69) {
+        if (msg.length > 256) {
             return
         }
 

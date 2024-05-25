@@ -13,10 +13,12 @@ import './App.css'
 import {
     addDoc,
     collection,
+    doc,
     getFirestore,
     onSnapshot,
     orderBy,
     query,
+    setDoc,
 } from 'firebase/firestore'
 import { useFirebaseApp, useFirestore } from 'solid-firebase'
 import { Guesses } from './Guesses'
@@ -90,6 +92,13 @@ function App() {
         setHasError(message)
         playErrorAudio(audio)
     }
+
+    const graveyardQuery = query(
+        collection(db, WORDGRAVEYARD),
+        orderBy('timestamp', 'desc')
+    )
+    const graveyardItems = useFirestore(graveyardQuery)
+
     const handleSubmit = async (e) => {
         e.preventDefault()
 
@@ -118,7 +127,17 @@ function App() {
 
         if (!isValidAnagram) {
             handleError('Sent to graveyard', 'grave')
-            await addDoc(collection(db, `${WORDGRAVEYARD}`), {
+
+            console.log(graveyardItems.data)
+            console.log(parsedInput)
+
+            // if (
+            //     graveyardItems.data.find((word) => word.value === parsedInput)
+            // ) {
+            //     return
+            // }
+
+            await setDoc(doc(db, `${WORDGRAVEYARD}`, parsedInput), {
                 value: parsedInput,
                 userId: userId(),
                 timestamp: Date.now(),
