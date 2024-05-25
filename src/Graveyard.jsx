@@ -1,32 +1,13 @@
-import { useFirebaseApp, useFirestore } from 'solid-firebase'
-import {
-    addDoc,
-    collection,
-    getFirestore,
-    onSnapshot,
-    orderBy,
-    query,
-} from 'firebase/firestore'
+import { For, Match, Switch } from 'solid-js'
 
-import { For, createSignal, createEffect, Match, Switch } from 'solid-js'
-
-const Graveyard = ({ word, userId }) => {
-    const app = useFirebaseApp()
-    const db = getFirestore(app)
-
-    const graveyardQuery = query(
-        collection(db, word),
-        orderBy('timestamp', 'desc')
-    )
-    const graveyardItems = useFirestore(graveyardQuery)
-
+const Graveyard = ({ items }) => {
     return (
         <Switch>
-            <Match when={graveyardItems.data}>
+            <Match when={items}>
                 <div className="graveyard">
                     <h2>Graveyard </h2>
                     <div className="graveyard-scroll">
-                        <For each={graveyardItems.data}>
+                        <For each={items}>
                             {(item, i) => (
                                 <>
                                     <div>

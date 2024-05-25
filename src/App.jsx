@@ -196,7 +196,7 @@ function App() {
                 <Match when={userId().length}>
                     <div className="column">
                         <AudioPad userId={userId} />
-                        <Graveyard userId={userId} word={WORDGRAVEYARD} />
+                        <Graveyard items={graveyardItems.data} />
                     </div>
                     <div className="column main">
                         <div>
