@@ -31,7 +31,7 @@ import Chat from './Chat'
 const levels = [
     {
         title: 'Word enjoyer',
-        target: Math.floor(anagramsList.length * 0.3),
+        target: Math.floor(anagramsList.length * 0.4),
         confetti: {
             force: 0.2,
             duration: 800,
@@ -41,7 +41,7 @@ const levels = [
     },
     {
         title: 'Word enthusiast',
-        target: Math.floor(anagramsList.length * 0.5),
+        target: Math.floor(anagramsList.length * 0.7),
         confetti: {
             force: 0.4,
             duration: 1200,
@@ -51,7 +51,7 @@ const levels = [
     },
     {
         title: 'Master Woorder',
-        target: Math.floor(anagramsList.length * 0.6),
+        target: Math.floor(anagramsList.length),
         confetti: {
             confetti: {
                 force: 0.6,
@@ -209,6 +209,7 @@ function App() {
                             </Match>
                             <Match when={guesses.error}>
                                 <p>An error occurred.</p>
+                                <pre>{JSON.stringify(guesses.errror)}</pre>
                             </Match>
                             <Match when={guesses.data}>
                                 <Guesses

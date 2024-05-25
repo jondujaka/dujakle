@@ -97,7 +97,12 @@ const Chat = ({ word, userId }) => {
             </Switch>
             <div className="chat-form">
                 <form onSubmit={handleSendMessage}>
-                    <input type="text" name="message" required />
+                    <input
+                        autocomplete="off"
+                        type="text"
+                        name="message"
+                        required
+                    />
                     <button type="submit">Submit</button>
                 </form>
             </div>

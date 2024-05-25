@@ -8,6 +8,7 @@ export const Guesses = (props) => {
     const [sort, setSort] = createSignal('')
     const [explode, setExplode] = createSignal(false)
     const { items, totalCount, targetWord, levels } = props
+    console.log(items.length)
 
     anagramsList.forEach((anagramItem) => {
         let isGuessed = false
