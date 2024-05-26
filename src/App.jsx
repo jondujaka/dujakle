@@ -64,10 +64,10 @@ const levels = [
         },
     },
 ]
-const WORD = 'OCCUPANCY'
+const WORD = 'SHOCKWAVE'
 const WORDGRAVEYARD = `${WORD.toLowerCase()}-graveyard`
 const WORDCHAT = `${WORD.toLowerCase()}-chat`
-const SCRAMBLED = 'CCPYCNOUA'
+const SCRAMBLED = 'AEVKCHSOW'
 
 function App() {
     const app = useFirebaseApp()
