@@ -196,48 +196,23 @@ function App() {
                 <Match when={userId().length}>
                     <div className="column">
                         <AudioPad userId={userId} />
-                        <Graveyard items={graveyardItems.data} />
+                        {/* <Graveyard items={graveyardItems.data} /> */}
                     </div>
                     <div className="column main">
-                        <div>
-                            <WordCircle word={SCRAMBLED} />
-                        </div>
-
-                        <Show when={hasError()}>
-                            <span className="error">{hasError()}</span>
-                        </Show>
-
-                        <form onSubmit={handleSubmit}>
-                            <input
-                                type="text"
-                                required
-                                value={input()}
-                                onInput={(e) => {
-                                    setHasError(false)
-                                    setInput(e.currentTarget.value)
-                                }}
-                            />
-                            <button type="submit">Submit</button>
-                        </form>
-                        <button className="hint-button" onClick={getHint}>
-                            Hint
-                        </button>
-                        <Switch>
-                            <Match when={guesses.loading}>
-                                <p>Loading...</p>
-                            </Match>
-                            <Match when={guesses.error}>
-                                <p>An error occurred.</p>
-                                <pre>{JSON.stringify(guesses.errror)}</pre>
-                            </Match>
-                            <Match when={guesses.data}>
-                                <Guesses
-                                    items={guesses.data}
-                                    levels={levels}
-                                    totalCount={anagramsList.length}
-                                />
-                            </Match>
-                        </Switch>
+                        <iframe
+                            class="video responsive"
+                            marginheight="0"
+                            marginwidth="0"
+                            src="https://d.daddylivehd.sx/embed/stream-54.php"
+                            name="iframe_a"
+                            scrolling="no"
+                            allowfullscreen="yes"
+                            width="100%"
+                            height="100%"
+                            frameborder="0"
+                        >
+                            Your Browser Do not Support Iframe
+                        </iframe>
                     </div>
                     <div className="column">
                         <Chat word={WORDCHAT} userId={userId} />
