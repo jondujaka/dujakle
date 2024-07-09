@@ -200,19 +200,12 @@ function App() {
                     </div>
                     <div className="column main">
                         <iframe
-                            class="video responsive"
-                            marginheight="0"
-                            marginwidth="0"
-                            src="https://d.daddylivehd.sx/embed/stream-54.php"
-                            name="iframe_a"
-                            scrolling="no"
-                            allowfullscreen="yes"
                             width="100%"
                             height="100%"
+                            src="https://nbastreamswatch.com/soccerstreams/1/video.php"
                             frameborder="0"
-                        >
-                            Your Browser Do not Support Iframe
-                        </iframe>
+                            allowfullscreen=""
+                        ></iframe>
                     </div>
                     <div className="column">
                         <Chat word={WORDCHAT} userId={userId} />
